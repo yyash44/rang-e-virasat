@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  top: 50%; transform: translateY(-50%);
+}
+.hero h1 { font-size: 3rem; color: gold; }
+.hero h2 { font-size: 2rem; color: #ff5555; }
+.logo { width: 150px; border-radius: 50%; }
+
+.social a {
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social .instagram { color: #E1306C; }
+.social .facebook { color: #1877F2; }
+.social .twitter { color: #1DA1F2; }
+
+.mvg {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+}
+.event-details { padding: 40px; }
+.gallery { padding: 40px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery-item {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-item:hover { transform: scale(1.05); }
+
+.register { padding: 40px; }
+.register-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff3333;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer { background: #111; padding: 20px; color: #777; }
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+}
+.lightbox-content img, .lightbox-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s, transform 1s; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
